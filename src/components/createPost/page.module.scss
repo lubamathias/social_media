@@ -1,0 +1,62 @@
+
+.card {
+    margin-top: 1rem;
+
+    background-color: transparent;
+}
+.container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+.containerContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding: 0.25rem;
+    
+
+    div {
+        align-self: baseline;
+    }
+
+}
+
+
+.avatar {
+    width: 2.5rem;
+    height: auto;
+    border-radius: 50%;
+
+}
+
+.textArea {
+    height: 100%;
+    min-height: 100px;
+    border: none;
+
+    margin: 0;
+    padding-top: 0;
+
+    background-color: transparent;
+}
+
+.buttonsContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttom {
+    cursor: pointer;
+}

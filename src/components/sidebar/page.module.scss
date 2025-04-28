@@ -1,0 +1,80 @@
+.card {
+    margin-top: 1rem;
+    background-color: transparent;
+}
+
+.profileTitle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h3 {
+            font-size: large;
+        }
+        h4 {
+            font-size: small;
+        }
+    }
+}
+
+.followContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        p {
+            font-size: small;
+        }
+    }
+}
+
+.extrasContainer {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: baseline;
+        gap: 0.5rem;
+
+        p {
+            font-size: small;
+        }
+    }
+}
+
+.siteLink {
+    cursor: pointer;
+    :hover {
+        color: blue;
+        text-decoration: underline;
+    }
+}
+
+
+
+.avatar {
+    width: 100px;
+    height: auto;
+
+
+}

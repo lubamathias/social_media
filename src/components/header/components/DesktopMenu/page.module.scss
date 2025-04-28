@@ -1,0 +1,41 @@
+.main {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 0.25rem;
+}
+.authenticatedMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+
+    Button {
+        .link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            gap: 0.25rem;
+        }
+    }
+}
+
+@media (min-width: 768px){
+    .main{
+        display: flex;
+    }
+    .modeToggle {
+        margin-left: 0.5rem;
+    }
+
+
+    
+}
+
+@media (max-width: 1024px){
+    .linkSpan {
+        display: none;
+    }
+}

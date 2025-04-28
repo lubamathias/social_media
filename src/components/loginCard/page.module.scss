@@ -1,0 +1,39 @@
+.card {
+    height: 80vh;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.cardContent {
+
+    width: 90%;
+    height: 100%;
+    display: flex;
+
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+    div {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h2 {
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+.button {
+    width: 100%;
+
+    cursor: pointer;
+}
+

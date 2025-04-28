@@ -1,0 +1,52 @@
+.card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    background-color: transparent;
+
+    .cardHeader {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+
+}
+
+.usersContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+
+
+    .div1 {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+
+        .div2 {
+            display: flex;
+            justify-content: baseline;
+            align-items: center;
+            gap: 0.5rem;
+
+            .div3{
+                display: flex;
+                justify-content: center;
+                align-items: baseline;
+                flex-direction: column;
+            }
+        }
+    }
+
+
+}
