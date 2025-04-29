@@ -20,10 +20,10 @@ export async function postContent( content: string, image: string){
         })
         
         revalidatePath("/");
-        return {sucess: true, post}
+        return {success: true, post}
     } catch (error) {
         console.error("Falha ao criar postagem")
-        return {sucess: false, error: "Falha ao criar postagem"}
+        return {success: false, error: "Falha ao criar postagem"}
     }
 }
 
