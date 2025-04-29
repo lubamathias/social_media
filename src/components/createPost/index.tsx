@@ -78,7 +78,7 @@ export function CreatePost(){
                                 </span>
                             </Button>
                         </div>
-                        <Button 
+                        <Button
                             className={style.buttom}
                             onClick={handleSubmit}
                             disabled= {(!content.trim() && !imgURL) || isPosting }>
