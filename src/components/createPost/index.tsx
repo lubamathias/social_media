@@ -27,7 +27,7 @@ export function CreatePost(){
         try {
             const result = await postContent (content, imgURL)
 
-            if (result.sucess) {
+            if (result && result.sucess) {
 
                 setContent(""),
                 setImgUrl(""),
