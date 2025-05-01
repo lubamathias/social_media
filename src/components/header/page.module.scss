@@ -23,5 +23,11 @@
 
 
     border-radius: 2px;
+    cursor: default;
+
+    -webkit-user-select: none; /* Safari/Chrome */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE/Edge */
+    user-select: none;   
 }
 

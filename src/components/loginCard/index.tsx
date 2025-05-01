@@ -9,13 +9,20 @@ export function LoginCard(){
         <Card className={style.card}>
             <CardContent className={style.cardContent}>
 
-                <SignInButton >
-                    <Button variant="default" className={style.button}>
-                        <strong>                        
-                            Entrar
-                        </strong>
-                    </Button>
-                </SignInButton>
+                <div>
+                    <SignInButton >
+                        <Button variant="default" className={style.button}>
+                            <strong>
+                                Entrar
+                            </strong>
+                        </Button>
+                    </SignInButton>
+                </div>
+                <div className={style.cDiv}>
+                    <h1 className={style.c}>
+                        C
+                    </h1>
+                </div>
                 <div>
                     <h2><strong>Ainda</strong> não faz parte?</h2>
 

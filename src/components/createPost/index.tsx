@@ -86,7 +86,7 @@ export function CreatePost(){
                                 {isPosting ? (
                                     <>
                                         <LoaderCircle/>
-                                        Postando..
+                                        Postando...
                                     </>
                                 ): (
                                     <>
