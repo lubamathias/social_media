@@ -40,6 +40,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: row;
+        -webkit-touch-callout: none;  /* iPhone OS, Safari */
+        -webkit-user-select: none;    /* Chrome, Safari 3 */
+        -khtml-user-select: none;     /* Safari 2 */
+        -moz-user-select: none;       /* Firefox */
+        -ms-user-select: none;        /* IE10+ */
+        user-select: none;  
 
         
         
@@ -52,17 +59,50 @@
 
 
 
-            font-size: 14rem;
+            font-size: 7rem;
 
-            animation: spin 3s ease-out;
+        
+        }
+
+        .c1 {
+            animation: spinC1 3s ease-in-out 1 forwards;
+        }
+        .c2 {
+            animation: spinC2 3s ease-in-out 1 forwards;
         }
     }
 }
 
-@keyframes  spin{
-    to {
-        transform: rotate3d(1, 1, 1, 360deg);
-    }
+.convexa {
+    font-family: "Tektur", sans-serif;
+    letter-spacing: 3px;
+    font-size: x-large;
+    color: #0bafb4;
+
+    margin-top: -2rem;
+    -webkit-touch-callout: none;  /* iPhone OS, Safari */
+    -webkit-user-select: none;    /* Chrome, Safari 3 */
+    -khtml-user-select: none;     /* Safari 2 */
+    -moz-user-select: none;       /* Firefox */
+    -ms-user-select: none;        /* IE10+ */
+    user-select: none;  
 }
 
-
+@keyframes  spinC1{
+    from {
+        transform: rotateZ(0deg)
+    }
+    to {
+        transform: rotateZ(-135deg);
+        margin-right: -0.75rem;
+    }
+}
+@keyframes  spinC2{
+    from {
+        transform: rotateZ(180deg);
+    }
+    to {
+        transform: rotateZ(315deg);
+        margin-left: -0.75rem;
+    }
+}

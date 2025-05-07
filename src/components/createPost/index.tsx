@@ -66,7 +66,7 @@ export function CreatePost(){
 
                     <Separator className="m-3"/>
                     <div className={style.buttonsContainer}>
-                        <div>
+                        <div className="hidden">
                             <Button 
                                 variant="ghost" 
                                 className={style.buttom}

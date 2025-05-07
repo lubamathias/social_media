@@ -81,7 +81,14 @@ export async function getPosts() {
           },
           likes: {
             select: {
-              userId: true,
+              user: {
+                select: {
+                  id: true,
+                  name: true,
+                  userName: true,
+                  image: true,
+                },
+              },
             },
           },
           _count: {
@@ -237,3 +244,4 @@ export async function deletePost(postId: string) {
         return {success: false, error: "Falha ao deletar a postagem"}
     }
 }
+

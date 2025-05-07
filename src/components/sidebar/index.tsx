@@ -8,8 +8,9 @@ import {
   import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
   import style from "./page.module.scss"
 import { Separator } from "../ui/separator";
-import { MapPinCheck, MapPinMinus, Link2 } from 'lucide-react';
+import { MapPinCheck, MapPinMinus, Link2, CircleUserRound  } from 'lucide-react';
 import Link from "next/link";
+import { FollowersModal } from "../followersModal";
 
   
 
@@ -39,6 +40,9 @@ export async function SideBar(){
                                 <AvatarImage
                                     src={user.image || "/avatar.png"}
                                 />
+                                <AvatarFallback>
+                                    <CircleUserRound width={100} height={100}/>
+                                </AvatarFallback>
                             </Avatar>
                             <div>
                                 <h3>
@@ -55,16 +59,19 @@ export async function SideBar(){
 
                     <div className={style.followContainer}>
                         <div>
-                            <p>
-                                {user._count.followers}
-                            </p>
-                            <p>seguidores</p>
+                            <FollowersModal 
+                                count={user._count.followers}
+                                label={user._count.followers === 1 ? "seguidor" : "seguidores"}
+                                list={user.followers.map(f => f.follower)}
+                            />
                         </div>
+
                         <div>
-                            <p>
-                                {user._count.following}
-                            </p>
-                            <p>seguindo</p>
+                            <FollowersModal 
+                                count={user._count.following}
+                                label="seguindo"
+                                list={user.following.map(f => f.following)}
+                            />
                         </div>
                     </div>
 

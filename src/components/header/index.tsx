@@ -10,7 +10,7 @@ export async function Header(){
     return(
         <header className={style.header}>
             <div className={style.title}>
-                conexa
+                convexa
             </div>
 
             <DesktopMenu/>

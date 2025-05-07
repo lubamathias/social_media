@@ -30,12 +30,12 @@ export async function DesktopMenu(){
                         </Link>
                     </Button>
                     <Button variant={"ghost"}>
-                        <Link href="/" className={style.link}>
+                        <Link href="/notification" className={style.link}>
                             <Bell/>
                             <span className={style.linkSpan}>Notifications</span>
                         </Link>
                     </Button>
-                    <Button variant={"ghost"}>
+                    <Button variant={"ghost"} className='hidden'>
                         <Link href="/" className={style.link}>
                             <User/>
                             <span className={style.linkSpan}>Profile</span>

@@ -18,10 +18,16 @@ export function LoginCard(){
                         </Button>
                     </SignInButton>
                 </div>
-                <div className={style.cDiv}>
-                    <h1 className={style.c}>
-                        C
-                    </h1>
+                <div className="flex align-center justify-center flex-col">
+                    <div className={style.cDiv}>
+                        <h1 className={`${style.c} ${style.c1}`}>
+                            C
+                        </h1>
+                        <h1 className={`${style.c} ${style.c2}`}>
+                            C
+                        </h1>
+                    </div>
+                    <h1 className={style.convexa}>convexa</h1>
                 </div>
                 <div>
                     <h2><strong>Ainda</strong> não faz parte?</h2>

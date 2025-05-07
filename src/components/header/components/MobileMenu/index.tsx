@@ -47,15 +47,15 @@ export function MobileMenu(){
                         </Link>
                     </Button>
                     <Button variant={"ghost"}>
-                        <Link href="/" className={style.link}>
+                        <Link href="/notification" className={style.link}>
                             <Bell/>
                             <span>Notifications</span>
                         </Link>
                     </Button>
                     <Button variant={"ghost"}>
-                        <Link href="/" className={style.link}>
+                        <Link href="/follows" className={style.link}>
                             <User/>
-                            <span>Profile</span>
+                            <span>Sugestões</span>
                         </Link>
                     </Button>
                     <SignOutButton>

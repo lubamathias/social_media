@@ -45,6 +45,28 @@ export async function getUserByClerkId(clerkId: string){
             clerkId,
         },
         include: {
+            followers: {
+                include: {
+                    follower: {
+                        select: {
+                            userName: true,
+                            name: true,
+                            image: true,
+                        }
+                    }
+                }
+            },
+            following: {
+                include: {
+                    following: {
+                        select: {
+                            userName: true,
+                            name:true,
+                            image: true,
+                        }
+                    }
+                }
+            },
             _count: {
                 select: {
                     followers: true,
@@ -52,6 +74,7 @@ export async function getUserByClerkId(clerkId: string){
                     posts: true,
                 },
             }
+            
         }
     })
 }

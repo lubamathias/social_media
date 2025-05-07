@@ -45,16 +45,16 @@ export default async function Home() {
           </div>
         </>
         
-      ): (
-        
+      ): ( null
+        /*
         <div className='hidden lg:block lg:col-span-10 flex justify-center'>
           <Image 
-          src="/images/mainImage.png"
+          src="/images/convexaLogo.png"
           alt='Main Image'
-          width={800}
-          height={800}
+          width={500}
+          height={500}
           />
-        </div>
+        </div> */
       )}
 
 

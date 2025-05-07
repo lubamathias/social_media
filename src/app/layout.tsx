@@ -31,8 +31,8 @@ export const metadata: Metadata = {
 
   // Título principal, com template para subpáginas
   title: {
-    default: 'Conexa | Rede Social de Networking para Profissionais de Tecnologia',
-    template: '%s | Conexa',
+    default: 'Convexa | Rede Social de Networking para Profissionais de Tecnologia',
+    template: '%s | Convexa',
   },
 
   // Descrição / meta description
