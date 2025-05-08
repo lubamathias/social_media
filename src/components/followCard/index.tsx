@@ -56,7 +56,7 @@ export default async function FollowCard() {
                         height={300}
                     />
                     <span className="text-sm text-muted-foreground">
-                        Agora vá tomar um café e espere novos usuários nascerem 🌱
+                        Agora vá tomar um café, poste uma expêriencia na rede e espere novos usuários nascerem 🌱
                     </span>
                     </div>
                 )}

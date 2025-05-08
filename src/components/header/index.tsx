@@ -3,6 +3,7 @@ import style from './page.module.scss'
 import { MobileMenu } from './components/MobileMenu'
 import { currentUser } from '@clerk/nextjs/server'
 import { syncUser } from '@/actions/user.actions';
+import MobileMenuServer from '../followMobileComponent';
   
 export async function Header(){
     const user = await currentUser();
@@ -14,7 +15,7 @@ export async function Header(){
             </div>
 
             <DesktopMenu/>
-            <MobileMenu/>
+            <MobileMenuServer/>
 
             {/* 
                 <SignedOut>

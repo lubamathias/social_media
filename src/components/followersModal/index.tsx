@@ -1,80 +1,62 @@
-"use client"
+// components/FollowersModal.tsx
+"use client";
 
 import { useState } from "react";
 import {
-    Dialog,
-    DialogContent,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
-  } from "@/components/ui/dialog"
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { Button } from "../ui/button";
-import { currentUser } from "@clerk/nextjs/server";
-import { getUserByClerkId } from "@/actions/user.actions";
 import { ScrollArea } from "../ui/scroll-area";
 import { Avatar, AvatarFallback } from "../ui/avatar";
 import { AvatarImage } from "@radix-ui/react-avatar";
-import {CircleUserRound  } from 'lucide-react';
+import { CircleUserRound } from "lucide-react";
 
-interface UserLite {
-    name: string | null;
-    userName: string | null;
-    image?: string | null;
-  }
-  
-  interface Props {
-    count: number;
-    label: string;
-    list: UserLite[];
-  }
+// importa nosso tipo centralizado
+import { UserLite } from "@/types/user";
 
-export function FollowersModal({count, list, label} : Props) {
-    const [isOpen, setIsOpen] = useState (false)
+interface Props {
+  count: number;
+  label: string;
+  list: UserLite[];
+}
 
-    return(
-        <Dialog open={isOpen} onOpenChange={setIsOpen}>
-            <DialogTrigger asChild>
-                <Button
-                    variant="ghost"
-                    className="flex flex-col h-8 cursor-pointer">
-                    <p>{count}</p>
-                    <p>{label}</p>
-                </Button>
-            </DialogTrigger>
-            <DialogContent>
-                <DialogHeader>
-                    <DialogTitle>
-                        {label}
-                    </DialogTitle>
-                </DialogHeader>
-                {list.length > 0 ? (
-                    <div>
-                        <ScrollArea>
-                            {list.map((follower, index) => (
-                                <div key={index} className="flex align-start mb-2 gap-2">
-                                    <Avatar className="w-6 h-6">
-                                        <AvatarImage src={follower.image || "/avatar.png"}/>
-                                        <AvatarFallback>
-                                            <CircleUserRound/>
-                                        </AvatarFallback>
-                                    </Avatar>
+export function FollowersModal({ count, list, label }: Props) {
+  const [isOpen, setIsOpen] = useState(false);
 
-                                    <span>
-                                        {follower.name || "usuário sem nome"}
-                                    </span>
-                                </div>
-                                
-                            ))}
-
-                        </ScrollArea>
-
-                    </div>
-                ): (
-                    <span>
-                        Nenhum usuário
-                    </span>
-                )}
-            </DialogContent>
-        </Dialog>
-    )
+  return (
+    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+      <DialogTrigger asChild>
+        <Button variant="ghost" className="flex flex-col h-8 cursor-pointer">
+          <p>{count}</p>
+          <p>{label}</p>
+        </Button>
+      </DialogTrigger>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>{label}</DialogTitle>
+        </DialogHeader>
+        {list.length > 0 ? (
+          <ScrollArea>
+            {list.map((follower, index) => (
+              <div key={index} className="flex items-center mb-2 gap-2">
+                <Avatar className="w-6 h-6">
+                  <AvatarImage src={follower.image || "/avatar.png"} />
+                  <AvatarFallback>
+                    <CircleUserRound />
+                  </AvatarFallback>
+                </Avatar>
+                <span>{follower.name || "usuário sem nome"}</span>
+              </div>
+            ))}
+          </ScrollArea>
+        ) : (
+          <span>Nenhum usuário</span>
+        )}
+      </DialogContent>
+    </Dialog>
+  );
 }

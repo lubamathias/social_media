@@ -49,6 +49,7 @@ export async function getUserByClerkId(clerkId: string){
                 include: {
                     follower: {
                         select: {
+                            id: true,
                             userName: true,
                             name: true,
                             image: true,
@@ -60,6 +61,7 @@ export async function getUserByClerkId(clerkId: string){
                 include: {
                     following: {
                         select: {
+                            id: true,
                             userName: true,
                             name:true,
                             image: true,
