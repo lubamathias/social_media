@@ -24,6 +24,8 @@ export async function SideBar(){
     const user = await getUserByClerkId(authUser.id);
     if (!user) return null;
 
+
+
     return (
         
         <div className={style.container}>

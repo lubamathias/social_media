@@ -1,4 +1,4 @@
-import { SignInButton, SignOutButton } from "@clerk/nextjs";
+import { SignInButton, SignOutButton, SignUpButton } from "@clerk/nextjs";
 import { Card, CardContent } from "../ui/card";
 import { Button } from "../ui/button";
 import Image from "next/image";
@@ -10,11 +10,11 @@ export function LoginCard(){
             <CardContent className={style.cardContent}>
 
                 <div>
-                    <SignInButton >
+                    <SignInButton mode="modal" >
                         <Button variant="default" className={style.button}>
-                            <strong>
+
                                 Entrar
-                            </strong>
+
                         </Button>
                     </SignInButton>
                 </div>
@@ -32,13 +32,13 @@ export function LoginCard(){
                 <div>
                     <h2><strong>Ainda</strong> não faz parte?</h2>
 
-                    <SignOutButton>
+                    <SignUpButton mode="modal">
                         <Button variant="secondary" className={style.button}>
-                            <strong>
-                                Cadastrar
-                            </strong>
+
+                            Cadastrar
+
                         </Button>
-                    </SignOutButton>
+                    </SignUpButton>
                 </div>
             </CardContent>
         </Card>

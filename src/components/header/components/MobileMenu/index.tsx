@@ -17,6 +17,7 @@ import { useAuth, SignInButton, SignOutButton, SignUpButton, UserButton } from "
 import { Menu, House, Bell, User, LogOut } from 'lucide-react';
 import style from "./page.module.scss"
 
+
 export function MobileMenu(){
     const {isSignedIn, isLoaded} = useAuth()
     return(
@@ -38,6 +39,7 @@ export function MobileMenu(){
                                 <div className={style.title}>
                                     <UserButton/>
                                 </div>
+
                             </SheetTitle>
                         </SheetHeader>
                     <Button variant={"ghost"}>
