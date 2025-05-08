@@ -257,7 +257,7 @@ export default function PostCard({post, dbUserId} : {post:Post; dbUserId: string
                                             {comment.author.name}
                                         </h4>
                                     </div>
-                                    <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                                    <div className="flex items-center flex-col space-x-2 text-sm text-muted-foreground">
                                         <Link href={`/profile/${comment.author.userName}`}>
                                             @{comment.author.userName}
                                         </Link>
