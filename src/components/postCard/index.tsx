@@ -261,9 +261,8 @@ export default function PostCard({post, dbUserId} : {post:Post; dbUserId: string
                                         <Link href={`/profile/${comment.author.userName}`}>
                                             @{comment.author.userName}
                                         </Link>
-                                        <span>●</span>
                                         <span>
-                                            {formatDistanceToNow(new Date(comment.createdAt)) }
+                                            ● {formatDistanceToNow(new Date(comment.createdAt)) }
                                         </span>
                                     </div>
                                 </CardHeader>
