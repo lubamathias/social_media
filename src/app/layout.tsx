@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     siteName: 'Convexa',
     images: [
       {
-        url: '/convexaLogo.png',
+        url: '/images/convexaLogo.png',
         width: 1200,
         height: 630,
         alt: 'Convexa logo e conexões',
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     title: 'Convexa | Conexões autênticas',
     description: 'Descubra a Convexa: onde ideias se encontram e oportunidades se conectam.',
     creator: '@SeuHandleNoTwitter',
-    images: ['/convexaLogo.png'],
+    images: ['/images/convexaLogo.png'],
   },
 };
 
