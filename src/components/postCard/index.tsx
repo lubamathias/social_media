@@ -114,13 +114,12 @@ export default function PostCard({post, dbUserId} : {post:Post; dbUserId: string
                             {post.author.name}
                         </h4>
                     </div>
-                    <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                    <div className="flex items-center flex-col space-x-2 text-sm text-muted-foreground">
                         <Link href={`/profile/${post.author.userName}`}>
                             @{post.author.userName}
                         </Link>
-                        <span>●</span>
                         <span >
-                            {formatDistanceToNow(new Date(post.createdAt)) }
+                            ● {formatDistanceToNow(new Date(post.createdAt)) }
                         </span>
                     </div>
                 </div>
