@@ -102,7 +102,7 @@ export default function PostCard({post, dbUserId} : {post:Post; dbUserId: string
     return(
         <Card className="w-full">
             <CardHeader className="w-full w-full flex items-center justify-between">
-                <div className="w-full flex items-center flex-row gap-1">
+                <div className="w-full flex items-center justify-between flex-row gap-1">
                     <div className="flex items-center flex-row gap-3">
                         <Avatar>
                             <AvatarImage className="w-10 h-auto rounded-full" src={post.author.image || "/avatar.png"} />
@@ -245,7 +245,7 @@ export default function PostCard({post, dbUserId} : {post:Post; dbUserId: string
                     <div>
                         {post.comments.map((comment) => (
                             <Card key={comment.id}>
-                                <CardHeader className="w-full flex items-center flex-row gap-2">
+                                <CardHeader className="w-full flex items-center justify-between flex-row gap-2">
                                     <div className="flex items-center flex-row gap-3">
                                         <Avatar>
                                             <AvatarImage className="w-6 h-auto rounded-full" src={comment.author.image || "/avatar.png"}/>
