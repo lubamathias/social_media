@@ -16,6 +16,7 @@ import { Menu, House, Bell, User, LogOut } from "lucide-react";
 import style from "./page.module.scss";
 import { FollowersModal } from "@/components/followersModal";
 import { UserData } from "@/types/user";
+import { Separator } from "@/components/ui/separator";
 
 type Props = { serverUser: UserData | null };
 
@@ -55,6 +56,7 @@ export function MobileMenu({ serverUser }: Props) {
                   list={serverUser.followers.map((f) => f.follower)}
                 />
               </div>
+
               <div className="flex flex-col items-center">
                 <FollowersModal
                   count={serverUser._count.following}
@@ -64,6 +66,8 @@ export function MobileMenu({ serverUser }: Props) {
               </div>
             </div>
 
+              <Separator />
+              
             <Button variant="ghost">
               <Link href="/" className={style.link}>
                 <House /> <span>Home</span>
